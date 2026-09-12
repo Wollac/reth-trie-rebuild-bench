@@ -1,0 +1,24 @@
+[package]
+name = "trie-gen-harness"
+description = "Test and benchmark harness for trie-gen-core: in-memory state, synthetic data, parity oracle"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+trie-gen-core.workspace = true
+reth-trie.workspace = true
+reth-trie-common.workspace = true
+reth-primitives-traits.workspace = true
+alloy-primitives.workspace = true
+alloy-trie.workspace = true
+rayon.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+
+[lints]
+workspace = true

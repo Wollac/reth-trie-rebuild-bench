@@ -1,0 +1,35 @@
+[workspace]
+resolver = "2"
+members = ["crates/core", "crates/harness"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Wollac/trie-gen"
+
+[workspace.dependencies]
+trie-gen-core = { path = "crates/core" }
+
+# Only dependencies reth already carries may appear in `crates/core`.
+# reth's trie crates are not published to crates.io, so they are pinned to a release tag.
+reth-trie = { git = "https://github.com/paradigmxyz/reth.git", tag = "v2.5.2" }
+reth-trie-common = { git = "https://github.com/paradigmxyz/reth.git", tag = "v2.5.2" }
+reth-primitives-traits = { version = "0.6.0", default-features = false, features = ["std"] }
+reth-storage-errors = { git = "https://github.com/paradigmxyz/reth.git", tag = "v2.5.2" }
+alloy-primitives = { version = "1.6", default-features = false, features = ["std", "map-foldhash"] }
+alloy-rlp = { version = "0.3.16", default-features = false }
+alloy-trie = { version = "0.9.4", default-features = false, features = ["std", "ethereum"] }
+rayon = "1.11"
+
+# Harness-only.
+proptest = "1.9"
+
+[workspace.lints.rust]
+missing_docs = "warn"
+unreachable_pub = "warn"
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"

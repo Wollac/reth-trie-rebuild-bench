@@ -1,0 +1,23 @@
+[package]
+name = "trie-gen-core"
+description = "Bulk Merkle-Patricia trie generation from sorted hashed state: partitioned, parallel, reth-shaped output"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+# Rule: nothing here that reth does not already depend on. This crate is meant to move into
+# reth's trie crates verbatim, with reth's cursor and trie-table types behind the two traits.
+[dependencies]
+reth-trie.workspace = true
+reth-trie-common.workspace = true
+reth-primitives-traits.workspace = true
+reth-storage-errors.workspace = true
+alloy-primitives.workspace = true
+alloy-rlp.workspace = true
+alloy-trie.workspace = true
+rayon.workspace = true
+
+[lints]
+workspace = true
