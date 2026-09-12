@@ -7,11 +7,11 @@
 //! nibble path, handed to a caller-supplied closure as nodes complete.
 //!
 //! The account trie is split into 16 partitions by the first nibble of the hashed address. Each
-//! partition is built independently with a [`HashBuilder`] over *relative* keys (leading nibble
-//! stripped) and emits its nodes at absolute paths; the root branch is assembled from the 16
-//! subtrie roots afterwards. Storage tries are built per account before the account leaf is
-//! encoded, so a stale storage root in the hashed account row (as left behind by block access
-//! list application during snap sync) is never trusted.
+//! partition is built independently with a [`HashBuilder`] over its key range, with absolute
+//! keys, so its nodes come out exactly as the serial build's; the node above the partitions is
+//! then formed by one more `HashBuilder` fed the 16 subtrie root nodes. Storage tries are built
+//! per account before the account leaf is encoded, so a stale storage root in the hashed account
+//! row (as left behind by block access list application during snap sync) is never trusted.
 //!
 //! Node emission and mask semantics are byte-for-byte those of reth's serial
 //! [`reth_trie::StateRoot`] over the same cursors, which is what the harness tests assert. In

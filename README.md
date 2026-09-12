@@ -19,14 +19,19 @@ rebuild, serially.
   left by BAL application are never trusted. The harness feeds it through reth's in-memory
   `HashedPostStateCursorFactory`; the real thing is the MDBX-backed factory.
 * **Partitioning** by the first nibble of the hashed address. Each of the 16 subtries is built by
-  its own `alloy_trie::HashBuilder` over keys with the leading nibble stripped, in parallel with
-  rayon. The builder's root node is then exactly the child a full build would place under that
-  nibble, and emitted branch nodes are re-keyed to absolute paths.
-* **Root assembly** encodes the 17-slot root branch from the 16 subtrie root references and
-  hashes it. The root node is not emitted: reth's `TrieUpdates` excludes root nodes, of the state
-  trie and of every storage trie, so the trie tables never hold them. Fewer than two populated
-  partitions means the real root is an extension or leaf, handled by falling back to a serial
-  pass (such tries are tiny).
+  its own `alloy_trie::HashBuilder` over its key range, with absolute keys, in parallel with
+  rayon. That is the serial build restricted to a range: every branch node it emits has the path
+  and masks the serial build gives it. Only the builder's own root differs from the whole trie's
+  node at that nibble (it is a leaf or extension whose key still starts with the nibble), so the
+  builder hands its root node back decoded, via a proof retainer with no targets, which keeps
+  exactly the node at the empty path.
+* **Root assembly** is one more `HashBuilder`, fed the 16 subtrie root nodes in key order the way
+  reth's walker feeds stored subtries: a leaf root as `add_leaf`, a branch (or the branch under a
+  root extension) as `add_branch` at its path. The builder forms whatever the trie has above the
+  partitions, so no partition count is special: zero gives the empty root, one gives a leaf or
+  extension re-keyed over the nibble, more give the root branch. The root node is not emitted:
+  reth's `TrieUpdates` excludes root nodes, of the state trie and of every storage trie, so the
+  trie tables never hold them.
 * **Output** is handed to one caller-supplied closure as nodes complete, as
   `(account, path, node)` with `account == None` for the state trie, reth's own convention for
   telling the two apart. `TrieUpdatesCollector` is the ready-made target that accumulates reth's

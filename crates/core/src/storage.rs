@@ -34,11 +34,11 @@ where
                 Nibbles::unpack(hashed_slot),
                 alloy_rlp::encode_fixed_size(&value).as_ref(),
             );
-            emit_completed(&mut hb, Some(hashed_address), Nibbles::new(), on_node);
+            emit_completed(&mut hb, Some(hashed_address), on_node);
         }
         entry = cursor.next()?;
     }
     let root = hb.root();
-    emit_completed(&mut hb, Some(hashed_address), Nibbles::new(), on_node);
+    emit_completed(&mut hb, Some(hashed_address), on_node);
     Ok(root)
 }
