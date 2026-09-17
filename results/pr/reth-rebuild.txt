@@ -1,0 +1,46 @@
+=== reth-rebuild (cold cache): /root/reth-trie-rebuild-bench/target/release/datadir_bench --reth-rebuild
+tip block 25969571 (Finish stage checkpoint)
+chunk 100: 117943415 entries walked, 10000011 nodes written, 432s
+chunk 200: 223752640 entries walked, 20000020 nodes written, 797s
+chunk 300: 321143271 entries walked, 30000031 nodes written, 1112s
+chunk 400: 436703967 entries walked, 40000041 nodes written, 1534s
+chunk 500: 558858437 entries walked, 50000051 nodes written, 1988s
+chunk 600: 676921661 entries walked, 60000060 nodes written, 2422s
+chunk 700: 796530350 entries walked, 70000068 nodes written, 2852s
+chunk 800: 915892849 entries walked, 80000080 nodes written, 3293s
+chunk 900: 1034267556 entries walked, 90000087 nodes written, 3727s
+chunk 1000: 1154952327 entries walked, 100000093 nodes written, 4169s
+chunk 1100: 1274014190 entries walked, 110000107 nodes written, 4612s
+chunk 1200: 1393218758 entries walked, 120000113 nodes written, 5048s
+chunk 1300: 1513302062 entries walked, 130000124 nodes written, 5485s
+chunk 1400: 1631875423 entries walked, 140000128 nodes written, 5925s
+chunk 1500: 1752086227 entries walked, 150000136 nodes written, 6374s
+chunk 1600: 1872882491 entries walked, 160000142 nodes written, 6819s
+chunk 1700: 1993970422 entries walked, 170000152 nodes written, 7262s
+reth rebuild: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 entries 2069063673 written 176135761 chunks 1762 elapsed 7659.60s peak heap 53.93 MiB
+reth rebuild: root matches expected
+trie tables: account nodes 31213680 storage nodes 144922081 nodes 176135761 digest e02cdaff680ec82691ab18f17c686c18 elapsed 552.96s
+reth walk over written tables: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 elapsed 998.72µs
+	Command being timed: "/root/reth-trie-rebuild-bench/target/release/datadir_bench --datadir /root/.local/share/reth/mainnet --expected-root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 --reth-rebuild"
+	User time (seconds): 2839.97
+	System time (seconds): 672.03
+	Percent of CPU this job got: 42%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:16:56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 126760092
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 48543780
+	Minor (reclaiming a frame) page faults: 12556262
+	Voluntary context switches: 101120773
+	Involuntary context switches: 37188
+	Swaps: 0
+	File system inputs: 388355488
+	File system outputs: 67473472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

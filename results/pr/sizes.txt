@@ -1,0 +1,2 @@
+245G	/root/.local/share/reth/mainnet/db
+16G	/root/.local/share/reth/mainnet/static_files

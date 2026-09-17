@@ -1,0 +1,2 @@
+tip block 25969571
+expected root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7

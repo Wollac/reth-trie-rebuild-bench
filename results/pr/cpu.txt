@@ -1,0 +1,9 @@
+CPU(s):                                  16
+Model name:                              Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz
+BIOS Model name:                         Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz  CPU @ 2.9GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      8
+               total        used        free      shared  buff/cache   available
+Mem:             123           2           2           0         120         121
+Swap:              0           0           0
+nproc 16

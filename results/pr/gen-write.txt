@@ -1,0 +1,107 @@
+=== gen-write (cold cache): /root/reth-trie-rebuild-bench/target/release/datadir_bench --write
+tip block 25969571 (Finish stage checkpoint)
+threads 16
+hashed entries 2069063673
+progress 1.54%: 31812550 of 2069063673 entries walked, 10s elapsed, 640s remaining
+progress 3.08%: 63772798 of 2069063673 entries walked, 20s elapsed, 629s remaining
+progress 4.57%: 94653821 of 2069063673 entries walked, 30s elapsed, 626s remaining
+progress 6.11%: 126442920 of 2069063673 entries walked, 40s elapsed, 615s remaining
+progress 7.64%: 158085940 of 2069063673 entries walked, 50s elapsed, 604s remaining
+progress 9.18%: 189972138 of 2069063673 entries walked, 60s elapsed, 593s remaining
+progress 10.73%: 221982024 of 2069063673 entries walked, 70s elapsed, 582s remaining
+progress 12.25%: 253553721 of 2069063673 entries walked, 80s elapsed, 573s remaining
+progress 13.80%: 285457069 of 2069063673 entries walked, 90s elapsed, 562s remaining
+progress 15.32%: 317000453 of 2069063673 entries walked, 100s elapsed, 553s remaining
+progress 16.87%: 349135967 of 2069063673 entries walked, 110s elapsed, 542s remaining
+progress 18.43%: 381298279 of 2069063673 entries walked, 120s elapsed, 531s remaining
+progress 19.97%: 413281533 of 2069063673 entries walked, 130s elapsed, 521s remaining
+progress 21.49%: 444583080 of 2069063673 entries walked, 140s elapsed, 512s remaining
+progress 23.06%: 477103707 of 2069063673 entries walked, 150s elapsed, 501s remaining
+progress 24.62%: 509398604 of 2069063673 entries walked, 160s elapsed, 490s remaining
+progress 26.18%: 541748587 of 2069063673 entries walked, 170s elapsed, 479s remaining
+progress 27.77%: 574644823 of 2069063673 entries walked, 180s elapsed, 468s remaining
+progress 29.35%: 607285690 of 2069063673 entries walked, 190s elapsed, 457s remaining
+progress 30.91%: 639605161 of 2069063673 entries walked, 200s elapsed, 447s remaining
+progress 32.45%: 671448720 of 2069063673 entries walked, 210s elapsed, 437s remaining
+progress 33.97%: 702926537 of 2069063673 entries walked, 220s elapsed, 428s remaining
+progress 35.49%: 734323220 of 2069063673 entries walked, 230s elapsed, 418s remaining
+progress 37.04%: 766418258 of 2069063673 entries walked, 240s elapsed, 408s remaining
+progress 38.60%: 798676173 of 2069063673 entries walked, 250s elapsed, 398s remaining
+progress 40.17%: 831169281 of 2069063673 entries walked, 260s elapsed, 387s remaining
+progress 41.75%: 863755698 of 2069063673 entries walked, 270s elapsed, 377s remaining
+progress 43.30%: 895866061 of 2069063673 entries walked, 280s elapsed, 367s remaining
+progress 44.85%: 927915051 of 2069063673 entries walked, 290s elapsed, 357s remaining
+progress 46.39%: 959896140 of 2069063673 entries walked, 300s elapsed, 347s remaining
+progress 47.94%: 991895415 of 2069063673 entries walked, 310s elapsed, 337s remaining
+progress 49.49%: 1024057710 of 2069063673 entries walked, 320s elapsed, 327s remaining
+progress 51.08%: 1056795869 of 2069063673 entries walked, 330s elapsed, 316s remaining
+progress 52.66%: 1089486734 of 2069063673 entries walked, 340s elapsed, 306s remaining
+progress 54.19%: 1121244138 of 2069063673 entries walked, 350s elapsed, 296s remaining
+progress 55.75%: 1153402328 of 2069063673 entries walked, 360s elapsed, 286s remaining
+progress 57.30%: 1185510304 of 2069063673 entries walked, 370s elapsed, 276s remaining
+progress 58.86%: 1217763297 of 2069063673 entries walked, 380s elapsed, 266s remaining
+progress 60.44%: 1250515380 of 2069063673 entries walked, 390s elapsed, 255s remaining
+progress 61.97%: 1282275556 of 2069063673 entries walked, 400s elapsed, 245s remaining
+progress 63.51%: 1314149220 of 2069063673 entries walked, 410s elapsed, 236s remaining
+progress 65.10%: 1346967419 of 2069063673 entries walked, 420s elapsed, 225s remaining
+progress 66.69%: 1379874066 of 2069063673 entries walked, 430s elapsed, 215s remaining
+progress 68.25%: 1412068738 of 2069063673 entries walked, 440s elapsed, 205s remaining
+progress 69.81%: 1444505191 of 2069063673 entries walked, 450s elapsed, 195s remaining
+progress 71.36%: 1476431904 of 2069063673 entries walked, 460s elapsed, 185s remaining
+progress 72.94%: 1509197819 of 2069063673 entries walked, 470s elapsed, 174s remaining
+progress 74.52%: 1541875043 of 2069063673 entries walked, 480s elapsed, 164s remaining
+progress 76.12%: 1575029659 of 2069063673 entries walked, 490s elapsed, 154s remaining
+progress 77.70%: 1607658039 of 2069063673 entries walked, 500s elapsed, 144s remaining
+progress 79.34%: 1641564392 of 2069063673 entries walked, 510s elapsed, 133s remaining
+progress 80.95%: 1674828156 of 2069063673 entries walked, 520s elapsed, 122s remaining
+progress 82.59%: 1708897380 of 2069063673 entries walked, 530s elapsed, 112s remaining
+progress 84.25%: 1743214198 of 2069063673 entries walked, 540s elapsed, 101s remaining
+progress 85.88%: 1776970175 of 2069063673 entries walked, 550s elapsed, 90s remaining
+progress 87.51%: 1810713029 of 2069063673 entries walked, 560s elapsed, 80s remaining
+progress 89.12%: 1843847937 of 2069063673 entries walked, 570s elapsed, 70s remaining
+progress 90.71%: 1876786253 of 2069063673 entries walked, 580s elapsed, 59s remaining
+progress 92.21%: 1907784405 of 2069063673 entries walked, 590s elapsed, 50s remaining
+progress 93.45%: 1933512938 of 2069063673 entries walked, 600s elapsed, 42s remaining
+progress 94.50%: 1955164929 of 2069063673 entries walked, 610s elapsed, 36s remaining
+progress 95.19%: 1969597704 of 2069063673 entries walked, 620s elapsed, 31s remaining
+progress 95.76%: 1981346800 of 2069063673 entries walked, 630s elapsed, 28s remaining
+progress 96.20%: 1990454512 of 2069063673 entries walked, 640s elapsed, 25s remaining
+progress 96.56%: 1997958720 of 2069063673 entries walked, 650s elapsed, 23s remaining
+progress 96.76%: 2002051772 of 2069063673 entries walked, 660s elapsed, 22s remaining
+progress 96.97%: 2006280917 of 2069063673 entries walked, 670s elapsed, 21s remaining
+progress 97.35%: 2014244288 of 2069063673 entries walked, 680s elapsed, 19s remaining
+progress 97.55%: 2018455831 of 2069063673 entries walked, 690s elapsed, 17s remaining
+progress 97.87%: 2024908533 of 2069063673 entries walked, 700s elapsed, 15s remaining
+progress 98.05%: 2028734059 of 2069063673 entries walked, 710s elapsed, 14s remaining
+progress 98.34%: 2034768449 of 2069063673 entries walked, 720s elapsed, 12s remaining
+progress 98.55%: 2039140603 of 2069063673 entries walked, 730s elapsed, 11s remaining
+progress 98.74%: 2042950493 of 2069063673 entries walked, 740s elapsed, 9s remaining
+progress 98.92%: 2046767384 of 2069063673 entries walked, 750s elapsed, 8s remaining
+progress 99.49%: 2058467744 of 2069063673 entries walked, 760s elapsed, 4s remaining
+run 1: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 entries 2069063673 written 176135761 chunks 1762 elapsed 764.34s peak heap 58.02 MiB
+run 1: root matches expected
+trie tables: account nodes 31213680 storage nodes 144922081 nodes 176135761 digest e02cdaff680ec82691ab18f17c686c18 elapsed 696.15s
+reth walk over written tables: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 elapsed 5.22ms
+	Command being timed: "/root/reth-trie-rebuild-bench/target/release/datadir_bench --datadir /root/.local/share/reth/mainnet --expected-root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 --write"
+	User time (seconds): 3934.37
+	System time (seconds): 1152.80
+	Percent of CPU this job got: 315%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 26:50.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 126772040
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 49815064
+	Minor (reclaiming a frame) page faults: 14774755
+	Voluntary context switches: 152921775
+	Involuntary context switches: 43235
+	Swaps: 0
+	File system inputs: 398520368
+	File system outputs: 85006016
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -26,14 +26,27 @@ serial rebuild produces, and measures both on mainnet.
   stored row (account, path, the three masks, stored hashes). It exists because both runs write
   the same tables in the same datadir one after the other, so the rows are never side by side
   to compare; equal digest and count means the generator wrote reth's rows. The walker check is
-  the complementary one: reth's reader accepts the stored nodes and reproduces the header root
-  from them.
+  the complementary one: with nothing marked changed, reth's walker reads the stored nodes under
+  the root, takes their hashes, and must arrive at the header root, which shows reth's reader
+  accepts what was written. It takes milliseconds and does not visit every row; the digest does.
 
 ## Results
 
-`results/pr/` will hold the run behind the PR's benchmark table once it has been produced from
-this branch: AWS i4i.4xlarge (16 vCPU, local NVMe), mainnet, cold page cache before each run,
-trie tables written end to end. Until then, no results are tracked here.
+`results/pr/` holds the run behind the PR's benchmark table, produced from the PR branch at the
+revision pinned in `Cargo.toml`: AWS i4i.4xlarge (16 vCPU Xeon 8375C, local NVMe), mainnet
+block 25,969,571, 2.07 billion hashed entries, cold page cache before each run, trie tables
+written end to end in 1,762 commits, root checked against the header.
+
+| Run | Threads | Build time | Peak heap |
+| --- | --- | --- | --- |
+| reth full rebuild (`MerkleStage` work, serial `StateRoot`) | 1 | 7,660 s | 53.9 MiB |
+| `PartitionedStateRoot`, writing | 16 | 764 s | 58.0 MiB |
+| `PartitionedStateRoot`, writing | 1 | 7,683 s | 57.9 MiB |
+
+All three left identical trie tables: 176,135,761 nodes, digest `e02cdaff680ec82691ab18f17c686c18`,
+and reth's walker reproduced the header root from each. Peak heap is counted at the allocator;
+the mapped database makes resident size meaningless. The `time -v` wall clocks in the raw files
+include the checks that follow each build.
 
 ## Run
 

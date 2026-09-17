@@ -1,0 +1,31 @@
+datadir /root/.local/share/reth/mainnet, tip block 25969571, expected root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7
+binary /root/reth-trie-rebuild-bench/target/release/datadir_bench
+bench commit unknown
+reth rev 801a4d0119
+CPU(s):                                  16
+Model name:                              Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz
+BIOS Model name:                         Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz  CPU @ 2.9GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      8
+               total        used        free      shared  buff/cache   available
+Mem:             123           2           2           0         120         121
+Swap:              0           0           0
+nproc 16
+
+reth-rebuild: threads 1, wall 2:16:56 (includes the checks below), cpu 42%
+  reth rebuild: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 entries 2069063673 written 176135761 chunks 1762 elapsed 7659.60s peak heap 53.93 MiB
+  reth rebuild: root matches expected
+  trie tables: 176135761 nodes, digest e02cdaff680ec82691ab18f17c686c18
+  reth walk over written tables: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 elapsed 998.72µs
+gen-write: threads 16, wall 26:50.00 (includes the checks below), cpu 315%
+  run 1: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 entries 2069063673 written 176135761 chunks 1762 elapsed 764.34s peak heap 58.02 MiB
+  run 1: root matches expected
+  trie tables: 176135761 nodes, digest e02cdaff680ec82691ab18f17c686c18
+  reth walk over written tables: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 elapsed 5.22ms
+gen-write-1: threads 1, wall 2:19:12 (includes the checks below), cpu 50%
+  run 1: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 entries 2069063673 written 176135761 chunks 1762 elapsed 7683.16s peak heap 57.94 MiB
+  run 1: root matches expected
+  trie tables: 176135761 nodes, digest e02cdaff680ec82691ab18f17c686c18
+  reth walk over written tables: root 0xd3db5d1e9738411b6ee9fd7fcdf761cca541f93b21b3938f83120bddaea331a7 elapsed 5.38ms
+
+PARITY OK: all runs left identical trie tables
